@@ -4,7 +4,7 @@
   export let values = []
   export let color = '#22c55e'
 
-  const maxValue = Math.max(...values, 1)
+  $: maxValue = Math.max(...(values && values.length ? values : [1]), 1)
   const chartHeight = 150
 </script>
 

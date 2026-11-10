@@ -2,7 +2,7 @@
 	<iframe
 		class="simulation-frame"
 		src="/impl1"
-		title="SIRMF ML Farm Intelligence"
+		title="CropWise ML Farm Intelligence"
 		loading="lazy"
 		referrerpolicy="same-origin"
 	></iframe>

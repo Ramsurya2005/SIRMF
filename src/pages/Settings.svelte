@@ -12,15 +12,15 @@
   }
 </script>
 
-<div class="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 md:p-8 md:pl-72">
-  <header class="bg-white shadow-md md:rounded-lg md:mb-8">
-    <div class="px-8 py-6">
+<div class="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-4 md:p-8">
+  <header class="bg-white shadow-md rounded-lg mb-6">
+    <div class="px-6 py-5">
       <h1 class="text-3xl font-bold text-gray-900">⚙️ {t('settings.title', $languageStore)}</h1>
       <p class="text-gray-500 mt-1">{t('settings.subtitle', $languageStore)}</p>
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto px-4 md:px-0">
+  <main class="max-w-3xl mx-auto">
     <div class="bg-white rounded-lg shadow-md p-6 md:p-8 border-l-4 border-emerald-500">
       <h2 class="text-xl font-bold text-gray-900 mb-3">🌐 {t('settings.languageTitle', $languageStore)}</h2>
       <p class="text-gray-600 text-sm mb-5">{t('settings.languageDescription', $languageStore)}</p>

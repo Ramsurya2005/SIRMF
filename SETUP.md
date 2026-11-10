@@ -8,6 +8,15 @@
 3. Copy your API key from API keys section
 4. Open `.env` file and replace:
    ```
+
+### Step 1b: Configure Crop Identification (Optional)
+1. Create a Google Gemini API key at https://aistudio.google.com/apikey
+2. Add it to `.env`:
+   ```
+   GEMINI_API_KEY=your_gemini_api_key_here
+   GEMINI_MODEL=gemini-2.0-flash
+   ```
+The key is used only by the backend and is never sent to the browser. The Crop Stage Detection page can then identify the crop from an uploaded image.
    OPENWEATHER_API_KEY=your_actual_key_here
    ```
 

@@ -46,15 +46,15 @@
       : 'Current moisture is within target range. Maintain existing schedule.'
 </script>
 
-<div class="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 md:p-8 md:pl-72">
-  <header class="bg-white shadow-md md:rounded-lg md:mb-8">
-    <div class="px-8 py-6">
+<div class="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-4 md:p-8">
+  <header class="bg-white shadow-md rounded-lg mb-6">
+    <div class="px-6 py-5">
       <h1 class="text-3xl font-bold text-gray-900">🧪 Soil Check</h1>
       <p class="text-gray-500 mt-1">Live soil monitoring report from simulation stats</p>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 md:px-0 space-y-6">
+  <main class="max-w-6xl mx-auto space-y-6">
     <div class="bg-white rounded-lg shadow-md p-5 border-l-4 border-emerald-500">
       <p class="text-sm text-gray-700">
         Soil Type: <span class="font-semibold">{selectedSoilType}</span>
@@ -98,15 +98,15 @@
       <div class="bg-white rounded-lg shadow-md p-6">
         <h2 class="text-lg font-bold text-gray-900 mb-4">💡 Monitoring Tips</h2>
         <div class="space-y-3 text-sm">
-          <div class="p-3 rounded-lg bg-blue-50 border border-blue-100 text-blue-900">
-            Keep this page open while running Farm Simulation to monitor live updates.
-          </div>
-          <div class="p-3 rounded-lg bg-emerald-50 border border-emerald-100 text-emerald-900">
-            Update soil type in Profile settings for better target moisture guidance.
-          </div>
-          <div class="p-3 rounded-lg bg-amber-50 border border-amber-100 text-amber-900">
-            Generate Irrigation Report after large weather/moisture changes.
-          </div>
+          <p class="text-gray-600">
+            • Check moisture readings before early morning irrigation cycles.
+          </p>
+          <p class="text-gray-600">
+            • Avoid prolonged high-moisture periods to limit fungal risk in root zones.
+          </p>
+          <p class="text-gray-600">
+            • Adjust soil type in Profile if local plot composition differs.
+          </p>
         </div>
       </div>
     </div>

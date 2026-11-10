@@ -18,7 +18,25 @@
 
   onMount(async () => {
     const isAuthenticated = await checkAuth()
-    currentPage = isAuthenticated ? 'dashboard' : 'login'
+    if (isAuthenticated) {
+      const hash = window.location.hash.replace('#', '').trim()
+      const validPages = ['dashboard', 'weather', 'irrigation', 'crop-stage', 'soil-check', 'farm', 'profile', 'settings']
+      currentPage = validPages.includes(hash) ? hash : 'dashboard'
+    } else {
+      currentPage = 'login'
+    }
+
+    const handleHashChange = () => {
+      if ($authStore.isAuthenticated) {
+        const hash = window.location.hash.replace('#', '').trim()
+        const validPages = ['dashboard', 'weather', 'irrigation', 'crop-stage', 'soil-check', 'farm', 'profile', 'settings']
+        if (validPages.includes(hash)) {
+          currentPage = hash
+        }
+      }
+    }
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
   })
 
   function handleNavigation(event) {
@@ -26,8 +44,10 @@
     if (page === 'logout') {
       logout()
       currentPage = 'login'
+      window.location.hash = ''
     } else {
       currentPage = page
+      window.location.hash = page
     }
   }
 
@@ -53,9 +73,9 @@
     <Signup on:navigate={handleNavigation} />
   {/if}
 {:else}
-  <div class="flex h-screen bg-white">
-    <Sidebar on:navigate={handleNavigation} />
-    <main class="flex-1 overflow-auto bg-white">
+  <div class="flex h-screen bg-white overflow-hidden">
+    <Sidebar currentPage={currentPage} on:navigate={handleNavigation} />
+    <main class="flex-1 overflow-auto bg-white min-w-0">
       {#if currentPage === 'dashboard'}
         <Dashboard on:navigate={handleNavigation} />
       {:else if currentPage === 'profile'}

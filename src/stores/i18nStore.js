@@ -19,12 +19,12 @@ const en = {
   'common.loading': 'Loading...',
   'common.location': 'Location',
 
-  'app.title': 'Smart Farming System',
+  'app.title': 'CropWise',
   'app.loading': 'Loading...',
   'app.irrigationTitle': 'Irrigation Management',
   'app.irrigationComingSoon': 'Irrigation management page coming soon...',
 
-  'sidebar.smartFarming': 'Smart Farming',
+  'sidebar.smartFarming': 'CropWise',
   'sidebar.loggedInAs': 'Logged in as',
   'sidebar.user': 'User',
   'sidebar.dashboard': 'Dashboard',
@@ -45,7 +45,7 @@ const en = {
   'settings.currentLanguage': 'Current language',
   'settings.applied': 'Language preference saved successfully.',
 
-  'login.header': 'Smart Farming',
+  'login.header': 'CropWise',
   'login.subheader': 'Intelligent Irrigation Management',
   'login.username': 'Username',
   'login.password': 'Password',
@@ -60,7 +60,7 @@ const en = {
   'login.errorFailed': 'Login failed',
 
   'signup.title': 'Create Your Farm Account',
-  'signup.step': 'Join Smart Farming Community - Step {step} of 2',
+  'signup.step': 'Join CropWise Community - Step {step} of 2',
   'signup.stepCredentials': 'Credentials',
   'signup.stepFarmDetails': 'Farm Details',
   'signup.username': 'Username',
@@ -158,7 +158,7 @@ const en = {
   'cropStage.model': 'Model:',
   'cropStage.topPredictions': 'Top Predictions',
 
-  'farmInfo.title': 'Smart Farm Simulator',
+  'farmInfo.title': 'CropWise Farm Simulator',
   'farmInfo.subtitle': 'Real-time farming simulation with AI irrigation management',
 }
 

@@ -68,9 +68,9 @@
   })
 </script>
 
-<div class="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 md:p-8 md:pl-72">
-  <header class="bg-white shadow-md md:rounded-lg md:mb-8">
-    <div class="px-8 py-6 md:flex md:items-center md:justify-between gap-3">
+<div class="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-4 md:p-8">
+  <header class="bg-white shadow-md rounded-lg mb-6">
+    <div class="px-6 py-5 md:flex md:items-center md:justify-between gap-3">
       <div>
         <h1 class="text-3xl font-bold text-gray-900">💧 Irrigation Report</h1>
         <p class="text-gray-500 mt-1">Water usage and efficiency report generated on request</p>
@@ -78,14 +78,14 @@
       <button
         on:click={generateReport}
         disabled={loading}
-        class="px-5 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 disabled:opacity-50"
+        class="mt-3 md:mt-0 px-5 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 disabled:opacity-50 transition shadow"
       >
         {loading ? 'Generating...' : 'Generate Report'}
       </button>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 md:px-0 space-y-6">
+  <main class="max-w-6xl mx-auto space-y-6">
     <div class="bg-white rounded-lg shadow-md p-5 border-l-4 border-emerald-500">
       <p class="text-sm text-gray-700">
         Farmer: <span class="font-semibold">{$authStore.user?.name || 'User'}</span>
